@@ -16,8 +16,9 @@ def main(words, progress = True):
                 return private_key, address
 
 
-loops = 1
-words = ["YOU", "CAN", "PUT", "MULTIPLE", "WORDS", "HERE"]
-
+loops = 2
+words = ["you", "can", "put", "MULTIPLE", "WORDS", "HERE"]
 if __name__ == "__main__":
-    main()
+    words = [word.upper() for word in words]
+    for _ in range(loops):
+        main(words)
